@@ -1,0 +1,200 @@
+:root {
+  color-scheme: dark;
+  --bg: #111111;
+  --surface: #1c1c1c;
+  --surface-2: #262626;
+  --border: #333333;
+  --text: #f2f2f2;
+  --text-dim: #a0a0a0;
+  --accent: #4f8cff;
+  --danger: #ff5c5c;
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+#app {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 1rem 1rem 6rem;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.app-header h1 {
+  font-size: 1.3rem;
+  margin: 0;
+  flex: 1 0 auto;
+}
+
+.back-link {
+  color: var(--text-dim);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.reset-btn {
+  background: var(--surface-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.85rem;
+}
+
+.seance-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.seance-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.seance-card-title {
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.seance-card-count {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+
+.steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.step {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 0.9rem;
+}
+
+.warmup-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.exercise-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.exercise-header h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.exercise-scheme {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+
+.video-slot {
+  margin-bottom: 0.6rem;
+}
+
+.video-slot video {
+  width: 100%;
+  border-radius: 0.5rem;
+  display: block;
+  background: black;
+}
+
+.video-loading {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+
+.add-video-btn,
+.replace-video-btn {
+  display: inline-block;
+  background: var(--surface-2);
+  border: 1px dashed var(--border);
+  border-radius: 0.5rem;
+  padding: 0.6rem;
+  text-align: center;
+  width: 100%;
+  color: var(--accent);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.replace-video-btn {
+  margin-top: 0.4rem;
+  width: auto;
+  display: inline-block;
+}
+
+.sets-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.set-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+}
+
+input[type='checkbox'] {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.rest-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--accent);
+  color: #0a0a0a;
+  padding: 0.9rem 1.25rem;
+  font-weight: 600;
+}
+
+.rest-bar-cancel {
+  background: rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0.35rem 0.6rem;
+  color: inherit;
+  font-weight: 600;
+}
